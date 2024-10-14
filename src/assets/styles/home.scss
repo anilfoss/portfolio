@@ -1,0 +1,133 @@
+.hero-section {
+    @apply grid gap-1 min-h-screen overflow-hidden;
+
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+
+    .box {
+        @apply bg-stone text-black p-12 relative;
+
+        &.box-1 {
+            grid-column: span 11;
+            grid-row: span 4;
+
+            @apply font-sans text-9xl grid place-content-center -top-full z-1;
+
+            h1 {
+                @apply overflow-hidden;
+
+                span {
+                    @apply inline-block min-w-5;
+
+                    &:empty {
+                        @apply px-1;
+                    }
+                }
+            }
+        }
+        &.box-2 {
+            grid-column: span 4;
+            grid-row: span 4;
+
+            @apply text-3xl text-stone-900 font-bold grid leading-tight content-center gap-2 -top-full z-1;
+        }
+        &.box-3 {
+            grid-column: span 6;
+            grid-row: span 5;
+
+            @apply p-0 rounded-br-5xl -top-[200%] -z-1;
+
+            display: grid;
+            grid-template-columns: 8fr 1fr 3fr;
+            grid-template-rows: 1fr;
+
+            .box-3-1 {
+                @apply text-3xl text-stone-900 font-bold leading-tight flex flex-wrap justify-center content-start flex-col gap-2 p-12;
+            }
+            .box-3-2 {
+                @apply flex flex-wrap;
+
+                a {
+                    @apply bg-black text-2xl text-white flex flex-wrap justify-center items-center w-full overflow-hidden cursor-pointer;
+                    writing-mode: vertical-lr;
+                    text-orientation: mixed;
+
+                    span {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+        &.box-4 {
+            grid-column: span 5;
+            grid-row: span 5;
+
+            @apply grid place-content-center rounded-bl-5xl -top-[200%] -z-1;
+
+            .round-text {
+                @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 invert scale-90;
+            }
+        }
+        &.box-5 {
+            grid-column: span 3;
+            grid-row: span 8;
+
+            @apply p-0 -right-[150%];
+        }
+        &.box-6 {
+            grid-column: span 1;
+            grid-row: span 5;
+
+            @apply -right-full;
+        }
+        &.box-7 {
+            grid-column: span 6;
+            grid-row: span 3;
+
+            @apply grid place-content-center rounded-tr-5xl top-full;
+        }
+        &.box-8 {
+            grid-column: span 5;
+            grid-row: span 3;
+
+            @apply grid place-content-center rounded-tl-5xl top-full;
+        }
+        &.box-9 {
+            grid-column: span 1;
+            grid-row: span 3;
+
+            @apply -right-full;
+        }
+    }
+}
+
+svg {
+    &.circular-text {
+        @apply w-80;
+        animation: rotate 25s linear infinite;
+
+        .textcircle {
+            @apply text-4xl font-bold;
+        }
+    }
+}
+
+.swiper-wrapper {
+    .swiper-slide {
+        @apply -my-[1px];
+
+        &:first-of-type {
+            img {
+                @apply pt-0;
+            }
+        }
+        img {
+            @apply py-4;
+        }
+        &:last-of-type {
+            img {
+                @apply pb-0;
+            }
+        }
+    }
+}

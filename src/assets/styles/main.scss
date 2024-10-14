@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+// sans: font-family: "Righteous", sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+// body: font-family: "Antonio", sans-serif;
+
+@import url("./keyframes.scss");
+@import url("./home.scss");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply overflow-x-hidden;
+}
+body {
+    @apply bg-black font-body text-base text-white min-h-screen cursor-default overflow-x-hidden;
+}
+
+* {
+    @apply box-border;
+}
+
+::selection {
+    @apply bg-black text-white;
+}

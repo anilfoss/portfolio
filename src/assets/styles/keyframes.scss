@@ -1,0 +1,18 @@
+// rotate
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// scroll
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
