@@ -4,6 +4,8 @@ export const name = "anil kumar";
 export const subTitle = "Let's talk about";
 export const subTitleWord = "PROJECT";
 
+export const ImgAnil = "/images/anil-kumar.webp";
+
 export const ImgDesktop1 = "/images/1-desktop.webp";
 export const ImgDesktop2 = "/images/2-desktop.webp";
 export const ImgDesktop3 = "/images/3-desktop.webp";

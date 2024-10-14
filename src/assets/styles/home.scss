@@ -65,7 +65,7 @@
             @apply grid place-content-center rounded-bl-5xl -top-[200%] -z-1;
 
             .round-text {
-                @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 invert scale-90;
+                // @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 invert scale-90;
             }
         }
         &.box-5 {

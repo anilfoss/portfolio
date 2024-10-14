@@ -6,7 +6,14 @@ import CurrentTime from "../common/CurrentTime";
 import CurrentDay from "../common/CurrentDay";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { name, subTitle, linkData, ResumeLink, subTitleWord } from "../../data";
+import {
+    name,
+    subTitle,
+    linkData,
+    ResumeLink,
+    subTitleWord,
+    ImgAnil,
+} from "../../data";
 
 gsap.registerPlugin(useGSAP);
 
@@ -115,10 +122,8 @@ const Hero = () => {
             // y: 20,
             opacity: 0,
             stagger: 0.1,
-            // duration: 0.6,
             duration: 0.5,
-            delay: 3,
-            // ease: "back.out(3)",
+            delay: 2,
             ease: "power2.out",
         });
 
@@ -234,7 +239,7 @@ const Hero = () => {
                 </div>
                 <div className="box-3-2">
                     <Link to={ResumeLink} target="_blank">
-                        <span className="flex gap-3">
+                        <span className="flex items-center gap-3">
                             DOWNLOAD RESUME{" "}
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -259,8 +264,8 @@ const Hero = () => {
             </div>
             <div className="box box-5">
                 <img
-                    src="https://images.pexels.com/photos/16876759/pexels-photo-16876759/free-photo-of-young-brunette-in-denim-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt=""
+                    src={ImgAnil}
+                    alt="Anil Kumar"
                     className="w-full h-full object-cover"
                 />
             </div>
