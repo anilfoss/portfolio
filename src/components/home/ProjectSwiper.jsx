@@ -19,7 +19,6 @@ const ProjectSwiper = () => {
         <Swiper
             direction="vertical"
             grabCursor={true}
-            // spaceBetween={30}
             slidesPerView={"auto"}
             freeMode={true}
             scrollbar={true}

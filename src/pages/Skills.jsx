@@ -11,7 +11,6 @@ const Skills = () => {
                 trigger: ".skills .heading",
                 start: "50% 50%",
                 end: "50% 50%",
-                // pin: true,
                 // markers: true,
                 scrub: 1,
                 ease: "power2.out",
