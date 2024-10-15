@@ -6,36 +6,22 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Skills = () => {
     useGSAP(() => {
-        let tl1 = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".skills .heading",
-                start: "50% 50%",
-                end: "50% 50%",
-                // markers: true,
-                scrub: 1,
-                ease: "power2.out",
-            },
-        });
-
-        tl1.from(".skills .heading h2", {
-            y: 50,
-            opacity: 0,
-            duration: 10,
-            delay: 5,
-        });
-    }, []);
-
-    useGSAP(() => {
         let tl2 = gsap.timeline({
             scrollTrigger: {
                 trigger: ".skills",
-                start: "50% 50%",
-                end: "100% 50%",
+                start: "top 50%",
+                end: "top 0%",
                 // markers: true,
-                pin: true,
                 scrub: 1,
-                ease: "power2.out",
+                ease: "power3.out",
             },
+        });
+
+        tl2.from(".heading h2", {
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            delay: 0,
         });
 
         tl2.to(".skill-javascript", {
@@ -208,136 +194,85 @@ const Skills = () => {
     }, []);
 
     return (
-        <section className="skills flex flex-wrap justify-center content-center flex-col gap-24 p-24 min-h-screen">
-            <div className="heading -mt-8 w-full">
-                <h2 className="font-sans text-white text-7xl font-bold text-center uppercase tracking-widest leading-normal">
-                    Expertise{" "}
-                    <span className="text-6xl relative -top-1">&#129492;</span>
+        <section className="skills">
+            <div className="heading">
+                <h2>
+                    Expertise <span>&#129492;</span>
                 </h2>
             </div>
 
-            <div className="text-xl flex flex-wrap justify-center content-center gap-8 mx-auto w-full max-w-6xl">
-                <div className="skill skill-react bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        React JS
-                    </span>
+            <div className="skill-wrapper">
+                <div className="skill skill-react">
+                    <span>React JS</span>
                 </div>
-                <div className="skill skill-next bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Next JS
-                    </span>
+                <div className="skill skill-next">
+                    <span>Next JS</span>
                 </div>
-                <div
-                    className={`skill skill-javascript bg-white opacity-0 blur-2xl scale-90 relative top-12`}
-                >
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Javascript
-                    </span>
+                <div className={`skill skill-javascript`}>
+                    <span>Javascript</span>
                 </div>
-                <div className="skill skill-typescript bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Typescript
-                    </span>
+                <div className="skill skill-typescript">
+                    <span>Typescript</span>
                 </div>
-                <div className="skill skill-redux bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Redux Toolkit
-                    </span>
+                <div className="skill skill-redux">
+                    <span>Redux Toolkit</span>
                 </div>
-                <div className="skill skill-nextui bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Next UI
-                    </span>
+                <div className="skill skill-nextui">
+                    <span>Next UI</span>
                 </div>
-                <div className="skill skill-material bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Material UI
-                    </span>
+                <div className="skill skill-material">
+                    <span>Material UI</span>
                 </div>
-                <div className="skill skill-tailwind bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Tailwind
-                    </span>
+                <div className="skill skill-tailwind">
+                    <span>Tailwind</span>
                 </div>
-                <div className="skill skill-bootstrap bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Bootstrap
-                    </span>
+                <div className="skill skill-bootstrap">
+                    <span>Bootstrap</span>
                 </div>
-                <div className="skill skill-strapi bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Strapi
-                    </span>
+                <div className="skill skill-strapi">
+                    <span>Strapi</span>
                 </div>
-                <div className="skill skill-prestashop bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Prestashop
-                    </span>
+                <div className="skill skill-prestashop">
+                    <span>Prestashop</span>
                 </div>
-                <div className="skill skill-wordpress bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Wordpress
-                    </span>
+                <div className="skill skill-wordpress">
+                    <span>Wordpress</span>
                 </div>
-                <div className="skill skill-shopify bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Shopify
-                    </span>
+                <div className="skill skill-shopify">
+                    <span>Shopify</span>
                 </div>
-                <div className="skill skill-squarespace bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Squarespace
-                    </span>
+                <div className="skill skill-squarespace">
+                    <span>Squarespace</span>
                 </div>
-                <div className="skill skill-webflow bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Webflow
-                    </span>
+                <div className="skill skill-webflow">
+                    <span>Webflow</span>
                 </div>
-                <div className="skill skill-divi bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Divi
-                    </span>
+                <div className="skill skill-divi">
+                    <span>Divi</span>
                 </div>
-                <div className="skill skill-elementor bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Elementor
-                    </span>
+                <div className="skill skill-elementor">
+                    <span>Elementor</span>
                 </div>
-                <div className="skill skill-vc bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Visual Composer
-                    </span>
+                <div className="skill skill-vc">
+                    <span>Visual Composer</span>
                 </div>
-                <div className="skill skill-html bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Html
-                    </span>
+                <div className="skill skill-html">
+                    <span>Html</span>
                 </div>
-                <div className="skill skill-css bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Css
-                    </span>
+                <div className="skill skill-css">
+                    <span>Css</span>
                 </div>
-                <div className="skill skill-photoshop bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Photoshop
-                    </span>
+                <div className="skill skill-photoshop">
+                    <span>Photoshop</span>
                 </div>
-                <div className="skill skill-figma bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Figma
-                    </span>
+                <div className="skill skill-figma">
+                    <span>Figma</span>
                 </div>
-                <div className="skill skill-zoho bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        Zoho
-                    </span>
+                <div className="skill skill-zoho">
+                    <span>Zoho</span>
                 </div>
-                <div className="skill skill-clickup bg-white opacity-0 blur-2xl scale-90 relative top-12">
-                    <span className="bg-black uppercase block px-14 pt-2 pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all">
-                        clickUp
-                    </span>
+                <div className="skill skill-clickup">
+                    <span>clickUp</span>
                 </div>
             </div>
         </section>

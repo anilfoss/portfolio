@@ -1,109 +1,79 @@
 .hero-section {
-    @apply grid gap-1 min-h-screen overflow-hidden;
-
-    grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    @apply grid grid-cols-1 md:grid-cols-15 grid-rows-5 md:grid-rows-7 2xl:grid-rows-12 gap-1 xl:min-h-screen overflow-hidden;
 
     .box {
-        @apply bg-stone text-black p-12 relative;
+        @apply bg-stone text-black p-6 sm:p-8 md:p-7 lg:p-8 xl:p-9 2xl:p-12 relative;
 
         &.box-1 {
-            grid-column: span 11;
-            grid-row: span 4;
-
-            @apply font-sans text-9xl grid place-content-center -top-full z-1;
+            @apply grid col-span-1 md:col-span-11 row-span-1 md:row-span-2 2xl:row-span-4 place-content-center -top-full z-1;
 
             h1 {
-                @apply overflow-hidden;
-
-                span {
-                    @apply inline-block min-w-5;
-
-                    &:empty {
-                        @apply px-1;
-                    }
-                }
+                @apply font-sans text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl leading-tight tracking-wider overflow-hidden;
             }
         }
         &.box-2 {
-            grid-column: span 4;
-            grid-row: span 4;
-
-            @apply text-3xl text-stone-900 font-bold grid leading-tight content-center gap-2 -top-full z-1;
+            @apply md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl text-stone-900 font-bold leading-tight hidden md:grid col-span-4 row-span-2 2xl:row-span-4 content-center gap-2 -top-full z-1;
         }
         &.box-3 {
-            grid-column: span 6;
-            grid-row: span 5;
+            @apply col-span-1 md:col-span-11 xl:col-span-6 row-span-3 2xl:row-span-5 p-0 md:rounded-br-5xl -top-[200%] -z-1;
 
-            @apply p-0 rounded-br-5xl -top-[200%] -z-1;
-
-            display: grid;
-            grid-template-columns: 8fr 1fr 3fr;
-            grid-template-rows: 1fr;
+            @apply grid grid-cols-[8fr_1fr_1fr] md:grid-cols-[8fr_1fr_3fr] grid-rows-1;
 
             .box-3-1 {
-                @apply text-3xl text-stone-900 font-bold leading-tight flex flex-wrap justify-center content-start flex-col gap-2 p-12;
+                @apply text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl text-stone-900 font-bold leading-tight flex flex-wrap justify-center content-start flex-col gap-2 p-6 sm:p-8 xl:p-9 2xl:p-12;
             }
             .box-3-2 {
                 @apply flex flex-wrap;
 
                 a {
-                    @apply bg-black text-2xl text-white flex flex-wrap justify-center items-center w-full overflow-hidden cursor-pointer;
+                    @apply bg-black text-xl lg:text-2xl text-white flex flex-wrap justify-center items-center w-full overflow-hidden cursor-pointer;
                     writing-mode: vertical-lr;
                     text-orientation: mixed;
 
                     span {
-                        transform: rotate(180deg);
+                        @apply rotate-180;
                     }
                 }
             }
         }
         &.box-4 {
-            grid-column: span 5;
-            grid-row: span 5;
-
-            @apply grid place-content-center rounded-bl-5xl -top-[200%] -z-1;
+            @apply hidden md:grid col-span-4 xl:col-span-5 row-span-3 2xl:row-span-5 place-content-center md:rounded-bl-5xl -top-[200%] -z-1;
 
             .round-text {
-                // @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 invert scale-90;
+                .circular-text {
+                    @apply w-52 h-52 lg:w-64 lg:h-64 xl:w-80 xl:h-80;
+                }
             }
         }
         &.box-5 {
-            grid-column: span 3;
-            grid-row: span 8;
-
-            @apply p-0 -right-[150%];
+            @apply col-span-3 row-span-5 2xl:row-span-8 p-0 -right-[150%];
         }
         &.box-6 {
-            grid-column: span 1;
-            grid-row: span 5;
-
-            @apply -right-full;
+            @apply col-span-1 row-span-3 2xl:row-span-5 -right-full;
         }
         &.box-7 {
-            grid-column: span 6;
-            grid-row: span 3;
+            @apply grid col-span-1 md:col-span-11 xl:col-span-6 row-span-1 md:row-span-2 2xl:row-span-3 place-content-center md:rounded-tr-5xl top-full;
 
-            @apply grid place-content-center rounded-tr-5xl top-full;
+            h3 {
+                @apply text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl text-stone-900 font-bold text-center leading-none flex md:flex-wrap justify-center;
+
+                .word {
+                    @apply font-sans text-[115%] text-black font-bold leading-[1.1] px-2 2xl:px-1;
+                }
+            }
         }
         &.box-8 {
-            grid-column: span 5;
-            grid-row: span 3;
-
-            @apply grid place-content-center rounded-tl-5xl top-full;
+            @apply hidden md:grid col-span-4 xl:col-span-5 row-span-2 2xl:row-span-3 place-content-center md:rounded-tl-5xl top-full;
         }
         &.box-9 {
-            grid-column: span 1;
-            grid-row: span 3;
-
-            @apply -right-full;
+            @apply col-span-1 row-span-2 2xl:row-span-3 -right-full;
         }
     }
 }
 
 svg {
     &.circular-text {
-        @apply w-80;
+        @apply w-60 lg:w-64 xl:w-72 2xl:w-80;
         animation: rotate 25s linear infinite;
 
         .textcircle {
@@ -131,3 +101,167 @@ svg {
         }
     }
 }
+
+.skills {
+    @apply flex flex-wrap justify-center content-center flex-col gap-10 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-24 px-6 py-20 sm:py-24 md:px-7 md:py-28 lg:px-8 lg:py-28 xl:px-9 xl:py-28 2xl:px-12 2xl:py-28 md:min-h-screen;
+
+    .heading {
+        @apply -mt-8 w-full;
+
+        h2 {
+            @apply font-sans text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-center uppercase tracking-widest leading-normal;
+
+            span {
+                @apply lg:text-5xl xl:text-6xl relative -top-1;
+            }
+        }
+    }
+
+    .skill-wrapper {
+        @apply text-base md:text-lg lg:text-xl flex flex-wrap justify-center content-center gap-5 sm:gap-6 md:gap-8 mx-auto w-full max-w-6xl;
+
+        .skill {
+            @apply bg-white opacity-0 blur-2xl scale-90 relative top-12;
+
+            span {
+                @apply bg-black uppercase block px-7 sm:px-8 md:px-11 lg:px-14 pt-1.5 pb-2 md:pt-2 md:pb-3 border-2 border-white origin-top-left rotate-0 hover:-rotate-2 transition-all;
+            }
+        }
+    }
+}
+
+// ==================================
+
+// .hero-section {
+//     @apply grid gap-1 min-h-screen overflow-hidden;
+
+//     grid-template-columns: repeat(15, 1fr);
+//     grid-template-rows: repeat(12, 1fr);
+
+//     .box {
+//         @apply bg-stone text-black p-8 xl:p-9 2xl:p-12 relative;
+
+//         &.box-1 {
+//             grid-column: span 11;
+//             grid-row: span 4;
+
+//             @apply grid place-content-center -top-full z-1;
+
+//             h1 {
+//                 @apply font-sans md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-9xl overflow-hidden;
+
+//                 span {
+//                     @apply inline-block min-w-5;
+
+//                     &:empty {
+//                         @apply px-1;
+//                     }
+//                 }
+//             }
+//         }
+//         &.box-2 {
+//             grid-column: span 4;
+//             grid-row: span 4;
+
+//             @apply md:text-xl xl:text-2xl 2xl:text-3xl text-stone-900 font-bold grid leading-tight content-center gap-2 -top-full z-1;
+//         }
+//         &.box-3 {
+//             grid-column: span 6;
+//             grid-row: span 5;
+
+//             @apply p-0 rounded-br-5xl -top-[200%] -z-1;
+
+//             display: grid;
+//             grid-template-columns: 8fr 1fr 3fr;
+//             grid-template-rows: 1fr;
+
+//             .box-3-1 {
+//                 @apply md:text-xl xl:text-2xl 2xl:text-3xl text-stone-900 font-bold leading-tight flex flex-wrap justify-center content-start flex-col gap-2 p-8 xl:p-9 2xl:p-12;
+//             }
+//             .box-3-2 {
+//                 @apply flex flex-wrap;
+
+//                 a {
+//                     @apply bg-black text-2xl text-white flex flex-wrap justify-center items-center w-full overflow-hidden cursor-pointer;
+//                     writing-mode: vertical-lr;
+//                     text-orientation: mixed;
+
+//                     span {
+//                         transform: rotate(180deg);
+//                     }
+//                 }
+//             }
+//         }
+//         &.box-4 {
+//             grid-column: span 5;
+//             grid-row: span 5;
+
+//             @apply grid place-content-center rounded-bl-5xl -top-[200%] -z-1;
+
+//             .round-text {
+//                 // @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 invert scale-90;
+//             }
+//         }
+//         &.box-5 {
+//             grid-column: span 3;
+//             grid-row: span 8;
+
+//             @apply p-0 -right-[150%];
+//         }
+//         &.box-6 {
+//             grid-column: span 1;
+//             grid-row: span 5;
+
+//             @apply -right-full;
+//         }
+//         &.box-7 {
+//             grid-column: span 6;
+//             grid-row: span 3;
+
+//             @apply grid place-content-center rounded-tr-5xl top-full;
+//         }
+//         &.box-8 {
+//             grid-column: span 5;
+//             grid-row: span 3;
+
+//             @apply grid place-content-center rounded-tl-5xl top-full;
+//         }
+//         &.box-9 {
+//             grid-column: span 1;
+//             grid-row: span 3;
+
+//             @apply -right-full;
+//         }
+//     }
+// }
+
+// svg {
+//     &.circular-text {
+//         @apply w-80;
+//         animation: rotate 25s linear infinite;
+
+//         .textcircle {
+//             @apply text-4xl font-bold;
+//         }
+//     }
+// }
+
+// .swiper-wrapper {
+//     .swiper-slide {
+//         @apply -my-[1px];
+
+//         &:first-of-type {
+//             img {
+//                 @apply pt-0;
+//             }
+//         }
+//         img {
+//             @apply py-4;
+//         }
+//         &:last-of-type {
+//             img {
+//                 @apply pb-0;
+//             }
+//         }
+//     }
+// }

@@ -33,12 +33,24 @@ export default {
             borderRadius: {
                 "5xl": "3rem",
             },
+            screens: {
+                "3xl": "2560px",
+            },
+            gridTemplateColumns: {
+                15: "repeat(15, minmax(0, 1fr))",
+            },
+            gridColumn: {
+                "span-15": "span 15 / span 15",
+            },
         },
     },
     plugins: [
         function ({ addUtilities }) {
             const newUtilities = {
-                ".text-stroke": {
+                ".text-stroke-1": {
+                    "-webkit-text-stroke": "1px #fff",
+                },
+                ".text-stroke-2": {
                     "-webkit-text-stroke": "2px #fff",
                 },
             };

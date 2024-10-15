@@ -42,11 +42,14 @@ const ThankYou = () => {
     return (
         <section ref={sectionRef}>
             <div className="inner bg-stone-200 text-black flex flex-wrap justify-center content-center gap-24 py-24 min-h-screen px-12">
-                <h3 id="text" className="font-sans text-8xl">
+                <h3
+                    id="text"
+                    className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+                >
                     {text.split("").map((letter, index) => (
                         <span
                             className={`tracking-wide inline-block ${
-                                letter === " " ? "px-3" : ""
+                                letter === " " ? "px-1 sm:px-2 xl:px-3" : ""
                             }`}
                             key={index}
                         >
@@ -55,7 +58,7 @@ const ThankYou = () => {
                     ))}
                     <span
                         id="icon"
-                        className="text-7xl inline-block ml-2 relative -top-3"
+                        className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl inline-block ml-2 relative -top-1.5 md:-top-3"
                     >
                         &#128591;
                     </span>

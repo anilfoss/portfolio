@@ -6,17 +6,57 @@ export const subTitleWord = "PROJECT";
 
 export const ImgAnil = "/images/anil-kumar.webp";
 
-export const ImgDesktop1 = "/images/1-desktop.webp";
-export const ImgDesktop2 = "/images/2-desktop.webp";
-export const ImgDesktop3 = "/images/3-desktop.webp";
-export const ImgDesktop4 = "/images/4-desktop.webp";
-export const ImgDesktop5 = "/images/5-desktop.webp";
-export const ImgDesktop6 = "/images/6-desktop.webp";
-export const ImgDesktop7 = "/images/7-desktop.webp";
-export const ImgDesktop8 = "/images/8-desktop.webp";
-export const ImgDesktop9 = "/images/9-desktop.webp";
-export const ImgDesktop10 = "/images/10-desktop.webp";
-export const ImgDesktop11 = "/images/11-desktop.webp";
+import ImgDesktop1 from "/images/1-desktop.webp";
+import ImgDesktop2 from "/images/2-desktop.webp";
+import ImgDesktop3 from "/images/3-desktop.webp";
+import ImgDesktop4 from "/images/4-desktop.webp";
+import ImgDesktop5 from "/images/5-desktop.webp";
+import ImgDesktop6 from "/images/6-desktop.webp";
+import ImgDesktop7 from "/images/7-desktop.webp";
+import ImgDesktop8 from "/images/8-desktop.webp";
+import ImgDesktop9 from "/images/9-desktop.webp";
+import ImgDesktop10 from "/images/10-desktop.webp";
+import ImgDesktop11 from "/images/11-desktop.webp";
+
+export const imagesDesktop = [
+    ImgDesktop1,
+    ImgDesktop2,
+    ImgDesktop3,
+    ImgDesktop4,
+    ImgDesktop5,
+    ImgDesktop6,
+    ImgDesktop7,
+    ImgDesktop8,
+    ImgDesktop9,
+    ImgDesktop10,
+    ImgDesktop11,
+];
+
+import ImgMobile1 from "/images/1-mobile.webp";
+import ImgMobile2 from "/images/2-mobile.webp";
+import ImgMobile3 from "/images/3-mobile.webp";
+import ImgMobile4 from "/images/4-mobile.webp";
+import ImgMobile5 from "/images/5-mobile.webp";
+import ImgMobile6 from "/images/6-mobile.webp";
+import ImgMobile7 from "/images/7-mobile.webp";
+import ImgMobile8 from "/images/8-mobile.webp";
+import ImgMobile9 from "/images/9-mobile.webp";
+import ImgMobile10 from "/images/10-mobile.webp";
+import ImgMobile11 from "/images/11-mobile.webp";
+
+export const imagesMobile = [
+    ImgMobile1,
+    ImgMobile2,
+    ImgMobile3,
+    ImgMobile4,
+    ImgMobile5,
+    ImgMobile6,
+    ImgMobile7,
+    ImgMobile8,
+    ImgMobile9,
+    ImgMobile10,
+    ImgMobile11,
+];
 
 export const ResumeLink = "/files/Anil_Kumar_Resume.pdf";
 

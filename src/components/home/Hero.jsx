@@ -191,7 +191,16 @@ const Hero = () => {
             <div className="box box-1">
                 <h1>
                     {name?.split("").map((letter, index) => {
-                        return <span key={index}>{letter}</span>;
+                        return (
+                            <span
+                                key={index}
+                                className={`inline-bloack ${
+                                    letter === " " ? "tracking-wide" : ""
+                                }`}
+                            >
+                                {letter}
+                            </span>
+                        );
                     })}
                 </h1>
             </div>
@@ -239,7 +248,7 @@ const Hero = () => {
                 </div>
                 <div className="box-3-2">
                     <Link to={ResumeLink} target="_blank">
-                        <span className="flex items-center gap-3">
+                        <span className="flex items-center gap-3 pl-1">
                             DOWNLOAD RESUME{" "}
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -262,16 +271,16 @@ const Hero = () => {
                     <RoundText />
                 </div>
             </div>
-            <div className="box box-5">
+            <div className="box box-5 hidden xl:block">
                 <img
                     src={ImgAnil}
                     alt="Anil Kumar"
                     className="w-full h-full object-cover"
                 />
             </div>
-            <div className="box box-6">{/* 6 */}</div>
+            <div className="box box-6 hidden xl:block">{/* 6 */}</div>
             <div className="box box-7">
-                <h3 className="text-5xl text-stone-900 font-bold text-center flex flex-wrap">
+                <h3>
                     {subTitle?.split("").map((letter, index) => {
                         return (
                             <span
@@ -282,23 +291,17 @@ const Hero = () => {
                             </span>
                         );
                     })}
-                    <span className="px-1"></span>
-                    {subTitleWord?.split("").map((letter, index) => {
-                        return (
-                            <span
-                                key={index}
-                                className="font-sans text-6xl text-black font-bold"
-                            >
-                                {letter}
-                            </span>
-                        );
-                    })}
+                    <span className="word">
+                        {subTitleWord?.split("").map((letter, index) => {
+                            return <span key={index}>{letter}</span>;
+                        })}
+                    </span>
                 </h3>
             </div>
             <div className="box box-8">
                 <IconDown />
             </div>
-            <div className="box box-9">{/* 9 */}</div>
+            <div className="box box-9 hidden xl:block">{/* 9 */}</div>
         </section>
     );
 };
