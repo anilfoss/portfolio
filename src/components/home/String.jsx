@@ -11,10 +11,17 @@ const String = () => {
 
     const screenWidth = useResize();
 
+    const strokeWidth =
+        screenWidth > 1921 ? (screenWidth * 0.003).toString() : 5;
+
     useEffect(() => {
         if (screenWidth > 1535) {
             setWidth("1200");
             setHeight("250");
+        }
+        if (screenWidth > 1921) {
+            setWidth((screenWidth * 0.6).toString());
+            setHeight((screenWidth * 0.1).toString());
         }
         if (screenWidth < 1536) {
             setWidth("1000");
@@ -87,7 +94,7 @@ const String = () => {
                         width - 10
                     } ${height / 2}`}
                     stroke="#000"
-                    strokeWidth="5"
+                    strokeWidth={strokeWidth}
                     fill="transparent"
                 />
             </svg>

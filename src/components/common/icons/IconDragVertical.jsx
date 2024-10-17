@@ -10,7 +10,7 @@ const IconDragVertical = () => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="lucide lucide-unfold-vertical"
+            className="lucide lucide-unfold-vertical 3xl:w-[1vw] 3xl:h-[1vw]"
         >
             <path d="M12 22v-6" />
             <path d="M12 8V2" />

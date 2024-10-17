@@ -1,11 +1,13 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import IconDown from "../common/icons/IconDown";
 import RoundText from "./RoundText";
-import { Link } from "react-router-dom";
 import CurrentTime from "../common/CurrentTime";
 import CurrentDay from "../common/CurrentDay";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
 import {
     name,
     subTitle,
@@ -15,10 +17,13 @@ import {
     ImgAnil,
 } from "../../data";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
 const Hero = () => {
     const heroRef = useRef(null);
+    const linksRef = useRef([]);
+    const linkSpanNormalRef = useRef([]);
+    const linkSpanHoverRef = useRef([]);
 
     useGSAP(() => {
         const links = gsap.utils.toArray(".box-3 .box-3-1 .link");
@@ -142,10 +147,6 @@ const Hero = () => {
         });
     }, []);
 
-    const linksRef = useRef([]);
-    const linkSpanNormalRef = useRef([]);
-    const linkSpanHoverRef = useRef([]);
-
     useGSAP(() => {
         const newLinks = document.querySelectorAll(".link");
         const newLinkSpanNormal = gsap.utils.toArray(linkSpanNormalRef.current);
@@ -153,7 +154,7 @@ const Hero = () => {
 
         const handleMouseEnter = (index) => {
             gsap.to(newLinkSpanNormal[index], {
-                top: "-50px",
+                top: "-100%",
             });
             gsap.to(newLinkSpanHover[index], {
                 top: "0%",
@@ -185,6 +186,16 @@ const Hero = () => {
             });
         };
     }, []);
+
+    const scrollToSection = (sectionId) => {
+        gsap.to(window, {
+            duration: 2,
+            scrollTo: {
+                y: sectionId,
+            },
+            ease: "power2.inOut",
+        });
+    };
 
     return (
         <section ref={heroRef} className="hero-section">
@@ -248,7 +259,7 @@ const Hero = () => {
                 </div>
                 <div className="box-3-2">
                     <Link to={ResumeLink} target="_blank">
-                        <span className="flex items-center gap-3 pl-1">
+                        <span className="flex items-center gap-3 3xl:gap-[0.8vw] pl-1">
                             DOWNLOAD RESUME{" "}
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -285,21 +296,30 @@ const Hero = () => {
                         return (
                             <span
                                 key={index}
-                                className={letter === " " ? "px-1" : null}
+                                className={
+                                    letter === " "
+                                        ? "px-1 3xl:px-[0.2vw]"
+                                        : null
+                                }
                             >
                                 {letter}
                             </span>
                         );
                     })}
-                    <span className="word">
+                    <Link
+                        onClick={() => scrollToSection("#projects")}
+                        className="word"
+                    >
                         {subTitleWord?.split("").map((letter, index) => {
                             return <span key={index}>{letter}</span>;
                         })}
-                    </span>
+                    </Link>
                 </h3>
             </div>
             <div className="box box-8">
-                <IconDown />
+                <Link onClick={() => scrollToSection("#marquee")}>
+                    <IconDown />
+                </Link>
             </div>
             <div className="box box-9 hidden xl:block">{/* 9 */}</div>
         </section>

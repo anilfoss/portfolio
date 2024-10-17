@@ -14,7 +14,6 @@ const AboutMe = () => {
             scrollTrigger: {
                 trigger: ".about-me",
                 start: "top 50%",
-                end: "50% 50%",
                 // markers: true,
                 scrub: 1,
             },
@@ -29,14 +28,17 @@ const AboutMe = () => {
             },
             "line"
         );
-        tl.to(
-            ".line1 span",
-            {
-                paddingInline: "0.75rem",
-                delay: 0,
-            },
-            "line"
-        );
+        {
+            screenWidth > 639 &&
+                tl.to(
+                    ".line1 span",
+                    {
+                        paddingInline: screenWidth > 1921 ? "0.8vw" : "0.75rem",
+                        delay: 0,
+                    },
+                    "line"
+                );
+        }
         tl.to(
             ".line2 .line-overlay",
             {
@@ -46,14 +48,18 @@ const AboutMe = () => {
             },
             "line"
         );
-        tl.to(
-            ".line2 span",
-            {
-                paddingInline: "0.5rem",
-                delay: 0,
-            },
-            "line"
-        );
+        {
+            screenWidth < 640 &&
+                tl.to(
+                    ".line2 span",
+                    {
+                        paddingInline: "0.5rem",
+                        delay: 0,
+                    },
+                    "line"
+                );
+        }
+
         tl.to(
             ".line3 .line-overlay",
             {
@@ -63,39 +69,49 @@ const AboutMe = () => {
             },
             "line"
         );
-        tl.to(
-            ".line4 .line-overlay",
-            {
-                width: "100%",
-                duration: 1,
-                delay: 0.1,
-            },
-            "line"
-        );
-        tl.to(
-            ".line5 .line-overlay",
-            {
-                width: "100%",
-                duration: 1.2,
-                delay: 0.12,
-            },
-            "line"
-        );        
-        tl.to(
-            ".line6 .line-overlay",
-            {
-                width: "100%",
-                duration: 1.4,
-                delay: 0.14,
-            },
-            "line"
-        );
+
+        {
+            screenWidth < 640 &&
+                tl.to(
+                    ".line4 .line-overlay",
+                    {
+                        width: "100%",
+                        duration: 1,
+                        delay: 0.1,
+                    },
+                    "line"
+                );
+        }
+        {
+            screenWidth < 640 &&
+                tl.to(
+                    ".line5 .line-overlay",
+                    {
+                        width: "100%",
+                        duration: 1.2,
+                        delay: 0.12,
+                    },
+                    "line"
+                );
+        }
+        {
+            screenWidth < 640 &&
+                tl.to(
+                    ".line6 .line-overlay",
+                    {
+                        width: "100%",
+                        duration: 1.4,
+                        delay: 0.14,
+                    },
+                    "line"
+                );
+        }
     }, [screenWidth]);
 
     return (
         <>
             {screenWidth > 639 ? (
-                <section className="about-me bg-stone-200 text-[clamp(1.5rem,_5vw,_2rem)] sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-black grid place-content-center place-items-center pt-12 pb-4 sm:px-6 sm:pt-20 sm:pb-8 md:pt-24 md:pb-8 md:min-h-screen"> 
+                <section className="about-me bg-stone-200 text-[clamp(1.5rem,_5vw,_2rem)] sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl 3xl:text-[3vw] text-black grid place-content-center place-items-center pt-12 pb-4 sm:px-6 sm:pt-20 sm:pb-8 md:pt-24 md:pb-8 3xl:p-[5vw] min-h-screen">
                     <div className="line line1 font-bold text-center uppercase leading-normal relative">
                         <div className="text-stone-500">
                             Hi, I’m a seasoned{" "}
@@ -130,7 +146,7 @@ const AboutMe = () => {
                     <String />
                 </section>
             ) : (
-                <section className="about-me bg-stone-200 text-[clamp(1.5rem,_5vw,_2rem)] sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-black grid place-content-center place-items-center pt-12 pb-4 sm:px-6 sm:pt-20 sm:pb-8 md:pt-24 md:pb-8 md:min-h-screen">
+                <section className="about-me bg-stone-200 text-[clamp(1.5rem,_5vw,_2rem)] sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl 3xl:text-[3vw] text-black grid place-content-center place-items-center pt-12 pb-4 sm:px-6 sm:pt-20 sm:pb-8 md:pt-24 md:pb-8 min-h-screen">
                     <div className="line line1 font-bold text-center uppercase leading-normal relative">
                         <div className="text-stone-500">
                             Hi, I’m a seasoned{" "}

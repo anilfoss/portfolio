@@ -34,7 +34,7 @@ export default {
                 "5xl": "3rem",
             },
             screens: {
-                "3xl": "2560px",
+                "3xl": "1921px",
             },
             gridTemplateColumns: {
                 15: "repeat(15, minmax(0, 1fr))",

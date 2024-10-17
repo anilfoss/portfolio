@@ -17,11 +17,12 @@ const Skills = () => {
             },
         });
 
-        tl2.from(".heading h2", {
+        tl2.from(".skills .heading h2", {
             y: 30,
             opacity: 0,
             duration: 1,
             delay: 0,
+            ease: "power1.inOut",
         });
 
         tl2.to(".skill-javascript", {

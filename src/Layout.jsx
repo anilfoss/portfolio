@@ -7,13 +7,15 @@ const Layout = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        const handleScroll = () => window.scrollTo(0, 0);
+        window.addEventListener("load", handleScroll);
 
         const timer = setTimeout(() => {
             setLoading(false);
         }, 1000);
 
         return () => {
+            window.removeEventListener("load", handleScroll);
             clearTimeout(timer);
         };
     }, []);

@@ -20,10 +20,11 @@ const Projects = () => {
                 document.querySelector(".project-wrapper").clientWidth;
             const mWidth = document.querySelector(".my").clientWidth;
             const wWidth = document.querySelector(".work").clientWidth;
+            const mwGap = screenWidth > 1921 ? screenWidth * 0.01 : 10;
             const myTextWidth =
-                projectWrapperWidth / 2 - mWidth / 2 - wWidth / 2 - 10;
+                projectWrapperWidth / 2 - mWidth / 2 - wWidth / 2 - mwGap;
             const workTextWidth =
-                projectWrapperWidth / 2 - mWidth / 2 - wWidth / 2 - 10;
+                projectWrapperWidth / 2 - mWidth / 2 - wWidth / 2 - mwGap;
 
             setMyTextWidth(myTextWidth);
             setWorkTextWidth(workTextWidth);
@@ -42,14 +43,14 @@ const Projects = () => {
             tl.to(
                 ".my",
                 {
-                    left: "-20",
+                    left: screenWidth > 1921 ? "-3vw" : "-20",
                 },
                 "project"
             )
                 .to(
                     ".work",
                     {
-                        right: "-20",
+                        right: screenWidth > 1921 ? "-3vw" : "-20",
                     },
                     "project"
                 )
@@ -65,15 +66,19 @@ const Projects = () => {
     );
 
     return (
-        <section ref={sectionRef}>
-            <div className="projects bg-stone-200 text-black flex flex-wrap justify-center content-center gap-24 px-6 py-[10vh]-111 md:px-7 lg:px-8 xl:px-9 2xl:px-12 min-h-screen">
+        <section id="projects" ref={sectionRef}>
+            <div className="projects bg-stone-200 text-black flex flex-wrap justify-center content-center gap-24 px-6 md:px-7 lg:px-8 xl:px-9 2xl:px-12 min-h-screen">
                 <div
                     className={`w-11/12 relative ${
-                        screenWidth > 767 ? "max-w-[1200px]" : "max-w-[411px]"
+                        screenWidth > 1921
+                            ? "max-w-[60vw]"
+                            : screenWidth > 767
+                            ? "max-w-[1200px]"
+                            : "max-w-[411px]"
                     }`}
                 >
                     <h2
-                        className="my font-sans text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl text-black font-bold text-center uppercase leading-normal table absolute z-1 -translate-y-1/2"
+                        className="my font-sans text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-[4vw] text-black font-bold text-center uppercase leading-normal table absolute z-1 -translate-y-1/2"
                         style={{ left: myWidth }}
                     >
                         My
@@ -82,7 +87,7 @@ const Projects = () => {
                         <ProjectSwiper />
                     </div>
                     <h2
-                        className="work font-sans text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl text-black font-bold text-center uppercase leading-normal table absolute z-1 -translate-y-1/2"
+                        className="work font-sans text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-[4vw] text-black font-bold text-center uppercase leading-normal table absolute z-1 -translate-y-1/2"
                         style={{ right: workWidth }}
                     >
                         Work

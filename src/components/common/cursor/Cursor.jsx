@@ -2,12 +2,15 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import IconDragVertical from "../icons/iconDragVertical";
+import useResize from "../../../hooks/useResize";
 
 gsap.registerPlugin(useGSAP);
 
 const Cursor = () => {
     const cursorRef = useRef(null);
     const dragVerticalRef = useRef(null);
+
+    const screenWidth = useResize();
 
     const moveCursor = (e) => {
         gsap.to(cursorRef.current, {
@@ -19,11 +22,6 @@ const Cursor = () => {
 
     // set cursor location
     useGSAP(() => {
-        gsap.set(cursorRef, {
-            xPercent: 100,
-            yPercent: 100,
-        });
-
         window.addEventListener("mousemove", moveCursor);
 
         return () => {
@@ -37,19 +35,19 @@ const Cursor = () => {
 
         const resizeOnLinkEnter = () => {
             gsap.to(cursorRef.current, {
-                marginTop: "-25px",
-                marginLeft: "-25px",
-                width: "50px",
-                height: "50px",
+                marginTop: screenWidth > 1921 ? "-1.25vw" : "-25px",
+                marginLeft: screenWidth > 1921 ? "-1.25vw" : "-25px",
+                width: screenWidth > 1921 ? "2.5vw" : "50px",
+                height: screenWidth > 1921 ? "2.5vw" : "50px",
             });
         };
 
         const resizeOnLinkLeave = () => {
             gsap.to(cursorRef.current, {
-                marginTop: "-10px",
-                marginLeft: "-10px",
-                width: "20px",
-                height: "20px",
+                marginTop: screenWidth > 1921 ? "-0.5vw" : "-10px",
+                marginLeft: screenWidth > 1921 ? "-0.5vw" : "-10px",
+                width: screenWidth > 1921 ? "1vw" : "20px",
+                height: screenWidth > 1921 ? "1vw" : "20px",
             });
         };
 
@@ -73,24 +71,28 @@ const Cursor = () => {
         const resizeOnImageEnter = () => {
             gsap.to(cursorRef.current, {
                 backgroundColor: "rgba(255,255,255,0.7)",
-                marginTop: "-30px",
-                marginLeft: "-30px",
-                width: "60px",
-                height: "60px",
+                marginTop: screenWidth > 1921 ? "-1.25vw" : "-30px",
+                marginLeft: screenWidth > 1921 ? "-1.25vw" : "-30px",
+                width: screenWidth > 1921 ? "2.5vw" : "60px",
+                height: screenWidth > 1921 ? "2.5vw" : "60px",
                 mixBlendMode: "inherit",
-                backdropFilter: "blur(3px)",
+                onUpdate: () => {
+                    cursorRef.current.style.backdropFilter = "blur(3px)";
+                },
             });
         };
 
         const resizeOnImageLeave = () => {
             gsap.to(cursorRef.current, {
                 backgroundColor: "#fff",
-                marginTop: "-10px",
-                marginLeft: "-10px",
-                width: "20px",
-                height: "20px",
+                marginTop: screenWidth > 1921 ? "-0.5vw" : "-10px",
+                marginLeft: screenWidth > 1921 ? "-0.5vw" : "-10px",
+                width: screenWidth > 1921 ? "1vw" : "20px",
+                height: screenWidth > 1921 ? "1vw" : "20px",
                 mixBlendMode: "difference",
-                backdropFilter: "none",
+                onUpdate: () => {
+                    cursorRef.current.style.backdropFilter = "none";
+                },
             });
         };
 
@@ -113,6 +115,8 @@ const Cursor = () => {
             ".project-wrapper .swiper-wrapper"
         );
         const projectImageText = document.querySelector(".drag-vertical");
+
+        if (projectImages === null) return;
 
         const resizeOnProjectImageEnter = () => {
             gsap.to(projectImageText, {
@@ -147,11 +151,11 @@ const Cursor = () => {
     return (
         <div
             ref={cursorRef}
-            className="cursor bg-white text-center grid place-content-center -ml-2.5 -mt-2.5 w-5 h-5 fixed z-[2] rounded-full pointer-events-none select-none mix-blend-difference"
+            className="cursor bg-white text-center grid place-content-center -ml-2.5 -mt-2.5 w-5 h-5 3xl:w-[1vw] 3xl:h-[1vw] fixed z-[2] rounded-full pointer-events-none select-none mix-blend-difference"
         >
             <span
                 ref={dragVerticalRef}
-                className="drag-vertical bg-transparent text-[80%] leading-tight opacity-0 scale-0 pointer-events-none select-none"
+                className="drag-vertical bg-transparent leading-tight opacity-0 scale-0 pointer-events-none select-none"
             >
                 <IconDragVertical />
             </span>

@@ -20,7 +20,7 @@ const ProjectSwiper = () => {
             className="mySwiper h-full"
         >
             {screenWidth > 767
-                ? imagesDesktop.map((image, index) => (
+                ? imagesDesktop?.map((image, index) => (
                       <SwiperSlide key={index}>
                           <img
                               src={image}
@@ -29,7 +29,7 @@ const ProjectSwiper = () => {
                           />
                       </SwiperSlide>
                   ))
-                : imagesMobile.map((image, index) => (
+                : imagesMobile?.map((image, index) => (
                       <SwiperSlide key={index}>
                           <img
                               src={image}
