@@ -6,6 +6,7 @@
 
 @import url("./keyframes.scss");
 @import url("./home.scss");
+@import url("./slider1.scss");
 
 @tailwind base;
 @tailwind components;
@@ -24,4 +25,8 @@ body {
 
 ::selection {
     @apply bg-black text-white;
+}
+
+#root {
+    @apply min-h-screen;
 }

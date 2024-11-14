@@ -1,0 +1,45 @@
+.slider1 {
+    @apply relative;
+
+    .slide {
+        @apply w-[100px] h-[132px] md:w-[120px] md:h-[160px] xl:w-[160px] xl:h-[212px] 2xl:w-[180px] 2xl:h-[240px] 3xl:w-[9vw] 3xl:h-[12vw] absolute left-1/2 bottom-8 3xl:bottom-[1.5vw] rounded-xl 3xl:rounded-5xl shadow-2xl 3xl:shadow-3xl overflow-hidden;
+        transition: all 0.5s ease-in-out 0.5s;
+
+        figure {
+            @apply m-0 w-full h-full;
+
+            img {
+                @apply w-full h-full object-cover;
+            }
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            @apply w-full h-full left-0 bottom-0 rounded-none;
+        }
+        &:nth-child(3) {
+            @apply left-1/2;
+        }
+        &:nth-child(4) {
+            @apply left-[calc(50%+100px+20px)] md:left-[calc(50%+120px+20px)] xl:left-[calc(50%+160px+20px)] 2xl:left-[calc(50%+180px+20px)] 3xl:left-[calc(50%+10%+1.5vw)];
+        }
+        &:nth-child(5) {
+            @apply left-[calc(50%+100px*2+20px*2)] md:left-[calc(50%+120px*2+20px*2)] xl:left-[calc(50%+160px*2+20px*2)] 2xl:left-[calc(50%+180px*2+20px*2)] 3xl:left-[calc(50%+10%*2+1.5vw*2)];
+        }
+        &:nth-child(6) {
+            @apply left-[calc(50%+100px*3+20px*3)] md:left-[calc(50%+120px*3+20px*3)] xl:left-[calc(50%+160px*3+20px*3)] 2xl:left-[calc(50%+180px*3+20px*3)] 3xl:left-[calc(50%+10%*3+1.5vw*3)];
+        }
+
+        /* here n = 0, 1, 2, 3,... */
+        &:nth-child(n + 7) {
+            @apply opacity-0 left-[calc(50%+100px*4+20px*4)] md:left-[calc(50%+120px*4+20px*4)] xl:left-[calc(50%+160px*4+20px*4)] 2xl:left-[calc(50%+180px*4+20px*4)] 3xl:left-[calc(50%+10%*4+1.5vw*4)];
+        }
+    }
+
+    .arrows {
+        @apply flex gap-4 3xl:gap-[1vw] absolute left-5 md:left-8 3xl:left-[1.5vw] bottom-8 3xl:bottom-[1.5vw];
+
+        button {
+        }
+    }
+}

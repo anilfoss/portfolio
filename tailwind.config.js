@@ -33,6 +33,9 @@ export default {
             borderRadius: {
                 "5xl": "3rem",
             },
+            boxShadow: {
+                "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+            },
             screens: {
                 "3xl": "1921px",
             },
@@ -42,8 +45,12 @@ export default {
             gridColumn: {
                 "span-15": "span 15 / span 15",
             },
+            aspectRatio: {
+                "3/4": "3 / 4",
+            },
         },
     },
+    // important: true,
     plugins: [
         function ({ addUtilities }) {
             const newUtilities = {

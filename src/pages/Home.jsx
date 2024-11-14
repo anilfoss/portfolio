@@ -4,7 +4,7 @@ import Hero from "../components/home/Hero";
 import Marquee2 from "../components/home/Marquee2";
 import Projects from "../components/home/Projects";
 import ThankYou from "../components/home/ThankYou";
-import Skills from "./Skills";
+import Skills from "../components/home/Skills";
 
 const Home = () => {
     return (

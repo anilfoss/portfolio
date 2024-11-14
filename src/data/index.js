@@ -6,17 +6,17 @@ export const subTitleWord = "PROJECT";
 
 export const ImgAnil = "/images/anil-kumar.webp";
 
-import ImgDesktop1 from "/images/1-desktop.webp";
-import ImgDesktop2 from "/images/2-desktop.webp";
-import ImgDesktop3 from "/images/3-desktop.webp";
-import ImgDesktop4 from "/images/4-desktop.webp";
-import ImgDesktop5 from "/images/5-desktop.webp";
-import ImgDesktop6 from "/images/6-desktop.webp";
-import ImgDesktop7 from "/images/7-desktop.webp";
-import ImgDesktop8 from "/images/8-desktop.webp";
-import ImgDesktop9 from "/images/9-desktop.webp";
-import ImgDesktop10 from "/images/10-desktop.webp";
-import ImgDesktop11 from "/images/11-desktop.webp";
+import ImgDesktop1 from "/images/projects/1-desktop.webp";
+import ImgDesktop2 from "/images/projects/2-desktop.webp";
+import ImgDesktop3 from "/images/projects/3-desktop.webp";
+import ImgDesktop4 from "/images/projects/4-desktop.webp";
+import ImgDesktop5 from "/images/projects/5-desktop.webp";
+import ImgDesktop6 from "/images/projects/6-desktop.webp";
+import ImgDesktop7 from "/images/projects/7-desktop.webp";
+import ImgDesktop8 from "/images/projects/8-desktop.webp";
+import ImgDesktop9 from "/images/projects/9-desktop.webp";
+import ImgDesktop10 from "/images/projects/10-desktop.webp";
+import ImgDesktop11 from "/images/projects/11-desktop.webp";
 
 export const imagesDesktop = [
     ImgDesktop1,
@@ -32,17 +32,17 @@ export const imagesDesktop = [
     ImgDesktop11,
 ];
 
-import ImgMobile1 from "/images/1-mobile.webp";
-import ImgMobile2 from "/images/2-mobile.webp";
-import ImgMobile3 from "/images/3-mobile.webp";
-import ImgMobile4 from "/images/4-mobile.webp";
-import ImgMobile5 from "/images/5-mobile.webp";
-import ImgMobile6 from "/images/6-mobile.webp";
-import ImgMobile7 from "/images/7-mobile.webp";
-import ImgMobile8 from "/images/8-mobile.webp";
-import ImgMobile9 from "/images/9-mobile.webp";
-import ImgMobile10 from "/images/10-mobile.webp";
-import ImgMobile11 from "/images/11-mobile.webp";
+import ImgMobile1 from "/images/projects/1-mobile.webp";
+import ImgMobile2 from "/images/projects/2-mobile.webp";
+import ImgMobile3 from "/images/projects/3-mobile.webp";
+import ImgMobile4 from "/images/projects/4-mobile.webp";
+import ImgMobile5 from "/images/projects/5-mobile.webp";
+import ImgMobile6 from "/images/projects/6-mobile.webp";
+import ImgMobile7 from "/images/projects/7-mobile.webp";
+import ImgMobile8 from "/images/projects/8-mobile.webp";
+import ImgMobile9 from "/images/projects/9-mobile.webp";
+import ImgMobile10 from "/images/projects/10-mobile.webp";
+import ImgMobile11 from "/images/projects/11-mobile.webp";
 
 export const imagesMobile = [
     ImgMobile1,
@@ -157,4 +157,40 @@ export const experienceData = [
         <li>Collaborated effectively with cross-functional teams to achieve project goals.</li>
         <li>Ensured websites were optimized for performance across various devices.</li>`,
     },
+];
+
+import Slider1Img1 from "/images/slider1/slider-img1.jpg";
+import Slider1Img2 from "/images/slider1/slider-img2.jpg";
+import Slider1Img3 from "/images/slider1/slider-img3.jpg";
+import Slider1Img4 from "/images/slider1/slider-img4.jpg";
+import Slider1Img5 from "/images/slider1/slider-img5.jpg";
+import Slider1Img6 from "/images/slider1/slider-img6.jpg";
+import Slider1Img7 from "/images/slider1/slider-img7.jpg";
+
+export const slider1Images = [
+    Slider1Img1,
+    Slider1Img2,
+    Slider1Img3,
+    Slider1Img4,
+    Slider1Img5,
+    Slider1Img6,
+    Slider1Img7,
+];
+
+import Slider1ThumbImg1 from "/images/slider1/slider-thumb-img1.jpg";
+import Slider1ThumbImg2 from "/images/slider1/slider-thumb-img2.jpg";
+import Slider1ThumbImg3 from "/images/slider1/slider-thumb-img3.jpg";
+import Slider1ThumbImg4 from "/images/slider1/slider-thumb-img4.jpg";
+import Slider1ThumbImg5 from "/images/slider1/slider-thumb-img5.jpg";
+import Slider1ThumbImg6 from "/images/slider1/slider-thumb-img6.jpg";
+import Slider1ThumbImg7 from "/images/slider1/slider-thumb-img7.jpg";
+
+export const slider1ThumbImages = [
+    Slider1ThumbImg1,
+    Slider1ThumbImg2,
+    Slider1ThumbImg3,
+    Slider1ThumbImg4,
+    Slider1ThumbImg5,
+    Slider1ThumbImg6,
+    Slider1ThumbImg7,
 ];
