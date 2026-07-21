@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Layout from "./Layout";
-import AboutLoader from "./components/about/aboutLoader";
+import AboutLoader from "./components/about/AboutLoader";
 import Slider from "./pages/Slider";
 import Slider1 from "./components/Slider/Slider1";
 import Slider2 from "./components/Slider/Slider2";
