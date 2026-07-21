@@ -26,7 +26,7 @@ const AboutMe = () => {
                 duration: 0.3,
                 delay: 0,
             },
-            "line"
+            "line",
         );
         {
             screenWidth > 639 &&
@@ -36,7 +36,7 @@ const AboutMe = () => {
                         paddingInline: screenWidth > 1921 ? "0.8vw" : "0.75rem",
                         delay: 0,
                     },
-                    "line"
+                    "line",
                 );
         }
         tl.to(
@@ -46,7 +46,7 @@ const AboutMe = () => {
                 duration: 0.6,
                 delay: 0.03,
             },
-            "line"
+            "line",
         );
         {
             screenWidth < 640 &&
@@ -56,7 +56,7 @@ const AboutMe = () => {
                         paddingInline: "0.5rem",
                         delay: 0,
                     },
-                    "line"
+                    "line",
                 );
         }
 
@@ -67,7 +67,7 @@ const AboutMe = () => {
                 duration: 0.8,
                 delay: 0.08,
             },
-            "line"
+            "line",
         );
 
         {
@@ -79,7 +79,7 @@ const AboutMe = () => {
                         duration: 1,
                         delay: 0.1,
                     },
-                    "line"
+                    "line",
                 );
         }
         {
@@ -91,7 +91,7 @@ const AboutMe = () => {
                         duration: 1.2,
                         delay: 0.12,
                     },
-                    "line"
+                    "line",
                 );
         }
         {
@@ -103,7 +103,7 @@ const AboutMe = () => {
                         duration: 1.4,
                         delay: 0.14,
                     },
-                    "line"
+                    "line",
                 );
         }
     }, [screenWidth]);
@@ -115,15 +115,15 @@ const AboutMe = () => {
                     <div className="line line1 font-bold text-center uppercase leading-normal relative">
                         <div className="text-stone-500">
                             Hi, I’m a seasoned{" "}
-                            <span className="text-black">Frontend UI</span>{" "}
-                            Developer
+                            <span className="text-black">
+                                Webflow Frontend Developer
+                            </span>
                         </div>
                         <div className="line-overlay w-0 whitespace-nowrap absolute left-0 top-0 overflow-hidden">
                             Hi, I’m a seasoned{" "}
                             <span className="bg-black text-white pb-4">
-                                Frontend UI
-                            </span>{" "}
-                            Developer
+                                Webflow Frontend Developer
+                            </span>
                         </div>
                     </div>
                     <div className="line line2 font-bold text-center uppercase leading-normal relative">
@@ -157,14 +157,14 @@ const AboutMe = () => {
                     </div>
                     <div className="line line2 font-bold text-center uppercase leading-normal relative">
                         <div className="text-stone-500">
-                            <span className="text-black">Frontend UI</span>{" "}
-                            Developer
+                            <span className="text-black">
+                                Webflow Frontend Developer
+                            </span>
                         </div>
                         <div className="line-overlay w-0 whitespace-nowrap absolute left-0 top-0 overflow-hidden">
                             <span className="bg-black text-white pb-4">
-                                Frontend UI
-                            </span>{" "}
-                            Developer
+                                Webflow Frontend Developer
+                            </span>
                         </div>
                     </div>
                     <div className="line line3 font-bold text-center uppercase leading-normal relative">

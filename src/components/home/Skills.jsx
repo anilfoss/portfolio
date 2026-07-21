@@ -203,6 +203,9 @@ const Skills = () => {
             </div>
 
             <div className="skill-wrapper">
+                <div className="skill skill-webflow">
+                    <span>Webflow</span>
+                </div>
                 <div className="skill skill-react">
                     <span>React JS</span>
                 </div>
@@ -245,9 +248,9 @@ const Skills = () => {
                 <div className="skill skill-squarespace">
                     <span>Squarespace</span>
                 </div>
-                <div className="skill skill-webflow">
+                {/* <div className="skill skill-webflow">
                     <span>Webflow</span>
-                </div>
+                </div> */}
                 <div className="skill skill-divi">
                     <span>Divi</span>
                 </div>
