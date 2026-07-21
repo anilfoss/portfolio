@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import IconDragVertical from "../icons/iconDragVertical";
+import IconDrag from "../icons/IconDrag";
 import useResize from "../../../hooks/useResize";
 
 gsap.registerPlugin(useGSAP);
@@ -112,7 +112,7 @@ const Cursor = () => {
     // resize on project images
     useGSAP(() => {
         const projectImages = document.querySelector(
-            ".project-wrapper .swiper-wrapper"
+            ".project-wrapper .swiper-wrapper",
         );
         const projectImageText = document.querySelector(".drag-vertical");
 
@@ -139,11 +139,11 @@ const Cursor = () => {
         return () => {
             projectImages.removeEventListener(
                 "mouseenter",
-                resizeOnProjectImageEnter
+                resizeOnProjectImageEnter,
             );
             projectImages.removeEventListener(
                 "mouseleave",
-                resizeOnProjectImageLeave
+                resizeOnProjectImageLeave,
             );
         };
     }, []);
@@ -157,7 +157,7 @@ const Cursor = () => {
                 ref={dragVerticalRef}
                 className="drag-vertical bg-transparent leading-tight opacity-0 scale-0 pointer-events-none select-none"
             >
-                <IconDragVertical />
+                <IconDrag />
             </span>
         </div>
     );
