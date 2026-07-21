@@ -96,66 +96,79 @@ export const linkData = [
 export const experienceData = [
     {
         id: 1,
+        time: "FEB 2025 - MAR 2026",
+        company: "Norfolk Technology Services Limited",
+        location: "Remote",
+        role: "Software Developer",
+        content: `
+        <li>Developed and maintained modern, responsive websites using Webflow and Next.js for international clients.</li>
+        <li>Built CMS-driven Webflow websites with reusable components and scalable page structures.</li>
+        <li>Implemented advanced Webflow interactions, GSAP animations, and smooth scrolling experiences using Lenis.</li>
+        <li>Converted Figma and Adobe XD designs into pixel-perfect, SEO-friendly Webflow websites.</li>
+        <li>Integrated custom JavaScript solutions and third-party tools into Webflow projects.</li>`,
+    },
+    {
+        id: 2,
         time: "MAR 2024 - AUG 2024",
         company: "Eminence Technology",
         location: "Mohali",
         role: "Sr. Frontend Designer",
         content: `
-        <li>Developed and maintained robust, scalable, and high-performance web applications using ReactJS and NextJS.</li>
-        <li>Architected and implemented complex UI components and libraries, enhancing the overall user experience.</li>
-        <li>Collaborated with cross-functional teams, including backend developers, designers, and product managers, to deliver seamless user experiences and meet project deadlines.</li>
-        <li>Led the migration of legacy codebases to modern React and Next JS frameworks, significantly improving maintainability and performance.</li>`,
+        <li>Designed and developed high-performance frontend applications using React.js, Next.js, and Webflow.</li>
+        <li>Built responsive marketing websites and landing pages in Webflow with clean and scalable structures.</li>
+        <li>Implemented custom animations and transitions using GSAP.</li>
+        <li>Created reusable UI components and design systems to streamline development workflows.</li>
+        <li>Collaborated with cross-functional teams to translate Figma designs into responsive web experiences.</li>`,
     },
     {
-        id: 2,
+        id: 3,
         time: "FEB 2022 - JAN 2024",
         company: "Think360 Solutions",
         location: "Mohali",
         role: "Sr. Frontend Developer",
         content: `
-        <li>Developed and implemented highly-responsive UI components using ReactJS.</li>
-        <li>Built reusable front-end components, enhancing code reusability for future projects.</li>
-        <li>Translated designs into high-quality code, maintaining design fidelity.</li>
-        <li>Optimized components for superior performance across various web devices and browsers.</li>
-        <li>Collaborated with the development team to enhance frontend performance, improving user experience.</li>`,
+        <li>Developed modern, responsive websites and landing pages using Webflow and React.js.</li>
+        <li>Built scalable CMS structures in Webflow for blogs, case studies, and dynamic content sections.</li>
+        <li>Customized Webflow projects using HTML, CSS, JavaScript, and third-party integrations.</li>
+        <li>Implemented smooth animations and interactive UI experiences to improve user engagement.</li>
+        <li>Collaborated with designers to ensure accurate implementation of UI/UX designs.</li>`,
     },
     {
-        id: 3,
+        id: 4,
         time: "MAR 2015 - FEB 2022",
         company: "Decosoft Solutions",
         location: "Mohali",
         role: "Lead / Sr. Frontend Developer",
         content: `
-        <li>Collaborated with the creative team to ensure timely project completion.</li>
-        <li>Executed end-to-end visual design stages from concept to development hand-off.</li>
-        <li>Conducted quality checks adhering to brand guidelines.</li>
-        <li>Integrated websites using modern frameworks like Bootstrap and Tailwind.</li>
-        <li>Mentored the team on emerging technologies for seamless operational integration.</li>
-        <li>Demonstrated meticulous attention to detail.</li>`,
+        <li>Developed responsive and interactive frontend interfaces using ReactJS and modern CSS frameworks.</li>
+        <li>Integrated Strapi CMS with ReactJS applications for dynamic content management.</li>
+        <li>Led frontend development activities and mentored junior developers on best coding practices.</li>
+        <li>Collaborated with design teams to execute visual concepts from wireframes to development.</li>
+        <li>Implemented Bootstrap and Tailwind-based responsive websites.</li>`,
     },
     {
-        id: 4,
+        id: 5,
         time: "DEC 2014 - FEB 2015",
         company: "VT Netzwelt",
         location: "Mohali",
         role: "Senior UI / UX Designer",
         content: `
-        <li>Demonstrated a strong grasp of aesthetic and design principles.</li>
-        <li>Excelled in troubleshooting and resolving design bugs.</li>
-        <li>Collaborated with team members to achieve unified project goals.</li>
-        <li>Developed responsive website designs, ensuring optimal performance on various devices.</li>`,
+        <li>Designed user-friendly and visually appealing website interfaces.</li>
+        <li>Worked collaboratively with development teams to improve user experience.</li>
+        <li>Ensured responsive behavior and consistent UI across devices.</li>
+        <li>Assisted in troubleshooting UI and frontend-related issues.</li>`,
     },
     {
-        id: 5,
+        id: 6,
         time: "OCT 2010 - NOV 2014",
         company: "Signity Solutions",
         location: "Chandigarh",
         role: "Web Designer",
         content: `
-        <li>Created visually appealing and user-friendly web designs.</li>
-        <li>Efficiently troubleshot and resolved design-related issues.</li>
-        <li>Collaborated effectively with cross-functional teams to achieve project goals.</li>
-        <li>Ensured websites were optimized for performance across various devices.</li>`,
+        <li>Designed responsive website layouts and user interfaces.</li>
+        <li>Converted PSD designs into functional HTML/CSS websites.</li>
+        <li>Collaborated with teams to maintain design consistency and usability.</li>
+        <li>Optimized websites for responsiveness and browser compatibility.</li>`,
     },
 ];
 
